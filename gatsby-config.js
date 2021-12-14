@@ -6,5 +6,21 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gastby-source-filesystem`,
+      name: `pages`,
+      options: `${__dirname}/src/pages`
+    },
+    {
+      resolve: `gastby-source-filesystem`,
+      name: `posts`,
+      options: `${__dirname}/src/posts`
+    },
+    {
+      resolve: `gastby-source-filesystem`,
+      name: `images`,
+      options: `${__dirname}/src/images`
+    },
+  ],
 }
