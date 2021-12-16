@@ -30,7 +30,7 @@ export const FooterSocialIcons = styled.div`
     margin-bottom: 2rem;
 
     & img {
-        height: 22px;
+        height: 30px;
         padding: 0 1rem;
         transition: filter 0.3s ease;
     }

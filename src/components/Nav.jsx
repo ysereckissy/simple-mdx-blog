@@ -12,7 +12,6 @@ export const Nav = () => {
         }
         
     `);
-    console.log(data);
     return (
         <NavElements>
             <Link to="/">

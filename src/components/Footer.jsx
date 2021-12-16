@@ -37,6 +37,7 @@ export const Footer = () => {
                         <img src={data.twitter.publicURL} alt="twitter logo" />
                     </a>
                 </FooterSocialIcons>
+                <p>&copy; 2020 Company. All right reserved.</p>
             </FooterSocialWrapper>
         </FooterWrapper>
     );
