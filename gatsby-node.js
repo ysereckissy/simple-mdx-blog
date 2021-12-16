@@ -1,6 +1,5 @@
-/*
 exports.createPages = async ({ actions, graphql }) => {
-    const data = await graphql`
+    const { data } = await graphql(`
         query {
             allMdx(sort: {fields: frontmatter___slug, order: DESC}) {
                 edges {
@@ -13,13 +12,14 @@ exports.createPages = async ({ actions, graphql }) => {
                 }
             }
         }
-    `;
+    `);
+    console.log("data from gatsby-node", data);
     /// create paginated pages for posts
     const postPerPage = 3;
     const numPages = Math.ceil(data.allMdx.edges.length / postPerPage);
     Array.from({ length: numPages }).forEach((_, index) => {
-        actions.createPages({
-            path: index === 0 ? `/` : `/${i + 1}`,
+        actions.createPage({
+            path: index === 0 ? `/` : `/${index + 1}`,
             component: require.resolve("./src/templates/allPosts.js"),
             context: {
                 limit: postPerPage,
@@ -30,6 +30,7 @@ exports.createPages = async ({ actions, graphql }) => {
         })
     });
 
+    /*
     /// Create single blog post
     data.allMdx.edges.forEach(edge => {
         const slug = edge.frontmatter.slug;
@@ -40,5 +41,5 @@ exports.createPages = async ({ actions, graphql }) => {
             context: { id }
         })
     })
+    */
 }
-*/

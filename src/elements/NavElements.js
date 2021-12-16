@@ -6,7 +6,7 @@ export const NavElements = styled.nav`
     display: flex;
     align-items: center;
     & img {
-        height: 30px;
+        height: 40px;
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
