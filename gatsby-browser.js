@@ -15,8 +15,10 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 export const wrapRootElement = ({ element }) => (
-    <ThemeProvider theme={Theme}>
-        <GlobalStyles />
-        {element}
-    </ThemeProvider>
+    <React.StrictMode>
+        <ThemeProvider theme={Theme}>
+            <GlobalStyles />
+            {element}
+        </ThemeProvider>
+    </React.StrictMode>
 );

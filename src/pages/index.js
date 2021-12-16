@@ -1,5 +1,15 @@
-import React from "react"
+import React from "react";
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+import { Container } from "../components/Container";
+
+const IndexPage = () => {
+    return (
+        <React.StrictMode>
+            <Container>
+                <h1>Hello World</h1>
+            </Container>
+        </React.StrictMode>
+    );
+};
+
+export default IndexPage;
