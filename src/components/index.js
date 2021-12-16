@@ -5,3 +5,4 @@ export * from './FreaturedImage';
 export * from './Content';
 export * from './ContentCard';
 export * from './Button';
+export * from './Pagination';
