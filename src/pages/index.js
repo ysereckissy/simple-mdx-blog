@@ -6,7 +6,6 @@ const IndexPage = () => {
     return (
         <React.StrictMode>
             <Container>
-                <h1>Hello World</h1>
             </Container>
         </React.StrictMode>
     );
