@@ -15,7 +15,7 @@ export const Nav = () => {
     return (
         <NavElements>
             <Link to="/">
-                <img src={data.logo.publicURL} />
+                <img src={data.logo.publicURL} alt="Home" />
             </Link>
         </NavElements>
     );
